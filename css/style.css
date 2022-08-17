@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "Open-Sans";
+  src: local("open-sans-regular"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open-Sans";
+  src: local("open-sans-semibold"), url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open-Sans";
+  src: local("open-sans-bold"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff2") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* root */
+
+:root {
+  --black: #000;
+  --mine-shaft: #333;
+  --dove-gray: #666;
+  --dusty-gray: #999;
+  --biloba-flower: #d1a9f0;
+  --heliotrope: #c283f3;
+  --amethyst: #9d5cd0;
+  --royal-purple: #7943a4;
+  --apple: #30bf39;
+  --curious-blue: #26a5e4;
+  --thunderbird: #d11616;
+  --silver: #cacaca;
+  --gallery: #ececec;
+  --white: #fff;
+}
+
+body {
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1630px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.fdd {
+  font-size: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/* header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__up {
+  padding: 30px 0;
+  background-color: var(--black);
+}
+
+.header__up-inner {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 62px;
+}
+
+.nav__item-link {
+  color: var(--white);
+}
+
+.header__btn {
+  align-items: center;
+  color: var(--white);
+}
+
+.enter {
+  margin-right: 7px;
+}
+
+.header__down {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__down-inner {
+  padding-top: 23px;
+  padding-bottom: 28px;
+}
+
+.route__list {
+  margin-right: auto;
+}
+
+.route__item {
+  position: relative;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.route__item::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 7px;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-75%);
+  background-image: url(../img/arrow.svg);
+  background-repeat: no-repeat;
+}
+
+.route__item:not(:last-child) {
+  margin-right: 96px;
+}
+
+.form {
+  align-items: center;
+}
+
+.form__btn {
+  margin-right: 9px;
+}
+
+.form__input-request {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--white);
+}
+
+.form__input-request::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--white);
+}
+
+/* hero */
+.hero__inner {
+  padding-top: 233px;
+  padding-bottom: 122px;
+}
+
+.hero__tittle {
+  margin-bottom: 1px;
+  width: 50%;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 98px;
+  color: var(--silver);
+}
+
+.hero__descr {
+  margin-bottom: 92px;
+  width: 50%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--silver);
+}
+
+/* about */
+/* gallery */
+/* catalog */
+/* events */
+/* projects */
+/* map */
+/* footer */
