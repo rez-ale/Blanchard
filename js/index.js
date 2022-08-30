@@ -40,7 +40,21 @@ const swiperEvents = new Swiper('.events__swiper', {
     nextEl: '.swiper-button-next-events',
     prevEl: '.swiper-button-prev-events',
   },
+});
 
+// swiperProjects
+const swiperProjects = new Swiper('.projects__sponsor-swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  slidesPerView: 3,
+  createElements: true,
+  loop: true,
+  spaceBetween: 50,
+  slidesPerGroup: 1,
+  navigation: {
+    nextEl: '.swiper-button-prev-projects',
+    prevEl: '.swiper-button-next-projects',
+  },
 });
 
 // gallerySelect
