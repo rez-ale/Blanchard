@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/accordion.min.css">
   <link rel="stylesheet" href="css/normailize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Blanchard - художественная галерея</title>
@@ -14,109 +16,467 @@
 
 <body>
   <header class="header">
-    <div class="header__top">
-      <div class="container">
-        <div class="header__top-inner flex">
-          <a class="logo">
-            <img src="img/logo.svg" alt="Blanchard - художественная галерея">
-          </a>
-          <nav class="header__top-nav">
-            <ul class="list-reset nav__list flex">
-              <li class="nav__item"><a href="#" class="nav__item-link">О нас</a></li>
-              <li class="nav__item"><a href="#" class="nav__item-link">Галерея</a></li>
-              <li class="nav__item"><a href="#" class="nav__item-link">Каталог</a></li>
-              <li class="nav__item"><a href="#" class="nav__item-link">События</a></li>
-              <li class="nav__item"><a href="#" class="nav__item-link">Проекты</a></li>
-              <li class="nav__item"><a href="#" class="nav__item-link">Контакты</a></li>
-            </ul>
-          </nav>
-          <div class="enter">
-            <svg class="enter__icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-                fill="white" />
-            </svg>
-            <a href="#" class="enter__link">Войти</a>
-          </div>
+    <div class="header_up">
+      <div class="container header_up-inner flex">
+        <a class="logo__link">
+          <img src="img/logo.svg" alt="Blanchard - художественная галерея">
+        </a>
+        <nav class="header__nav">
+          <ul class="list-reset nav__list flex">
+            <li class="nav__item"><a href="#" class="item__link">О нас</a></li>
+            <li class="nav__item"><a href="#" class="item__link">Галерея</a></li>
+            <li class="nav__item"><a href="#" class="item__link">Каталог</a></li>
+            <li class="nav__item"><a href="#" class="item__link">События</a></li>
+            <li class="nav__item"><a href="#" class="item__link">Проекты</a></li>
+            <li class="nav__item"><a href="#" class="item__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="enter">
+          <svg class="enter__icon" width="13" height="13" viewBox="0 0 13 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+              fill="white" />
+          </svg>
+          <button class="btn-reset enter__btn">Войти</button>
         </div>
       </div>
     </div>
-    <div class="header__down">
-      <div class="container">
-        <div class="header__down-inner flex">
-          <ul class="list-reset types__list flex">
-            <li class="types__item">Реализм</li>
-            <li class="types__item">Импрессионизм</li>
-            <li class="types__item">Постимпрессионизм</li>
-            <li class="types__item">Авангард</li>
-            <li class="types__item">Футуризм</li>
-          </ul>
-          <div class="header__down-search">
-            <form class="form flex">
-              <button class="btn-reset search__btn">
-                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="6.8678" height="1.71695"
-                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"
-                    fill="white" />
-                </svg>
-              </button>
-              <input class="form__input" type="text" name="search" id="search" placeholder="Поиск по сайту">
-            </form>
-          </div>
-        </div>
+    <div class="header__bottom">
+      <div class="container header__bottom-inner flex">
+        <ul class=" list-reset sort__list flex">
+          <li class="sort__item">Реализм</li>
+          <li class="sort__item">Импрессионизм</li>
+          <li class="sort__item">Постимпрессионизм</li>
+          <li class="sort__item">Авангард</li>
+          <li class="sort__item">Футуризм</li>
+        </ul>
+        <form class="search flex" action="#">
+          <button class="btn-reset search__btn">
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"
+                fill="white" />
+            </svg>
+          </button>
+          <input class="search__input" type="text" name="search" id="search" placeholder="Найти по сайту">
+        </form>
       </div>
     </div>
   </header>
-
   <main class="main">
-    <div class="hero">
+    <section class="hero">
       <div class="container">
         <div class="hero__inner">
           <h1 class="hero__tittle">Прикоснитесь к прекрасному</h1>
           <p class="hero__descr">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт
-            предпосылки для новых предложений
-          </p>
-          <div class="hero__link">
-            <a href="#" class="subs">Подписаться на рассылку</a>
-          </div>
+            предпосылки для новых предложений</p>
+          <button class="btn-reset hero__btn">Подписаться на рассылку</button>
         </div>
       </div>
-      <div class="swiper">
+      <div class="hero__swiper swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide bg-lide-1"></div>
-          <div class="swiper-slide bg-lide-2"></div>
-          <div class="swiper-slide bg-lide-3"></div>
+          <div class="swiper-slide" style="background-image: url(/img/slider-1.jpg);"></div>
+          <div class="swiper-slide" style="background-image: url(/img/slider-2.jpg);"></div>
+          <div class="swiper-slide" style="background-image: url(/img/slider-3.jpg);"></div>
         </div>
       </div>
-    </div>
+    </section>
     <section class="about">
       <div class="container">
         <h2 class="about__tittle">О нас</h2>
-        <p class="about__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определённых слоёв населения, а&nbsp;значит, должны быть разоблачены.</p>
+        <p class="about__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно
+          определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних
+          резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта
+          влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает,
+          что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план
+          целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов
+          и&nbsp;ресурсов.
+          В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
+          среди
+          определённых слоёв населения, а&nbsp;значит, должны быть разоблачены.</p>
       </div>
     </section>
     <section class="gallery">
       <div class="container">
-        <div class="gallery__inner">
-          <h2 class="gallery__tittle">Галерея</h2>
-          <form class="gallery__form" action="posthttps://jsonplaceholder.typicode.com/posts" method="post">
-            <h3 class="select__tittle">Фильтр:</h3>
-            <select class="gallery__select" name="genres" id="genres">
-              <option value="painting" selected>Живопись</option>
-              <option value="picture">Рисунок</option>
-              <option value="sculpture">Скульптура</option>
-            </select>
-  
-          </form>
+        <div class="gallery__inner flex">
+          <div class="gallery__left flex">
+            <h2 class="gallery__tittle">Галерея</h2>
+            <div class="filter__box">
+              <span class="mark">Фильтр:</span>
+              <select class="gallery__filter" name="filter" id="filter">
+                <option class="filter__value" value="Живопись" selected>Живопись</option>
+                <option class="filter__value" value="Рисунок">Рисунок</option>
+                <option class="filter__value" value="Скульптура">Скульптура</option>
+              </select>
+            </div>
+
+            <div class="gallery__left-checkbox flex">
+              <label for="first" class="checkbox__info">
+                <input type="checkbox" name="first" id="first" class="stage">XIX век
+                <span class="check__icon"></span>
+              </label>
+              <label for="second" class="checkbox__info">
+                <input type="checkbox" name="second" id="second" class="stage">XX век
+                <span class="check__icon"></span>
+              </label>
+              <label for="third" class="checkbox__info">
+                <input type="checkbox" name="third" id="third" class="stage">Современность
+                <span class="check__icon"></span>
+              </label>
+            </div>
+          </div>
+          <div class="gallery__right">
+            <div class="swiper gallery__swiper">
+              <div class="gallery__swiper-nav">
+                <div class="swiper-button-prev-gallery"></div>
+                <div class="gallery__pagination"></div>
+                <div class="swiper-button-next-gallery"></div>
+              </div>
+              <div class="swiper-wrapper">
+                <a class="swiper-slide gallery__slide bg-slide-1"></a>
+                <a class="swiper-slide gallery__slide bg-slide-2"></a>
+                <a class="swiper-slide gallery__slide bg-slide-3"></a>
+                <a class="swiper-slide gallery__slide bg-slide-4"></a>
+                <a class="swiper-slide gallery__slide bg-slide-5"></a>
+                <a class="swiper-slide gallery__slide bg-slide-6"></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="gallery__swiper"></div>
+      </div>
+    </section>
+    <section class="catalog">
+      <div class="container">
+        <h2 class="catalog__tittle">Каталог</h2>
+        <p class="catalog__descr">Акционеры крупнейших компаний, которые представляют собой яркий пример
+          континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы
+          этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
+          нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены
+          на&nbsp;независимые элементы.</p>
+        <div class="catalog__content flex">
+          <div class="catalog__content-left">
+            <div class="painter__card painter__card--active" data-target="main">
+              <picture class="fdd">
+                <img class="painter__photo" src="img/painter-main.jpg" alt="Доменико Гирландайо">
+              </picture>
+              <h3 class="painter__name">Доменико Гирландайо</h3>
+              <span class="painter__life-time">2 июня 1448–11 января 1494</span>
+              <p class="painter__info">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+                художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной
+                мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор
+                фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь
+                библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того
+                времени).</p>
+            </div>
+            <div class="painter__card" data-target="default">
+              <picture class="fdd">
+                <img class="painter__photo" src="img/default.jpg" alt="Заглушка">
+              </picture>
+              <h3 class="painter__name">Что мы о нём знаем?</h3>
+              <p class="painter__info">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что
+                посмотреть!</p>
+              <a href="#gallery" class="painter__to-gallary">В галерею</a>
+            </div>
+          </div>
+          <div class="catalog__content-right">
+            <div class="accordion-container">
+
+              <div class="ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger">
+                    <h3>C&nbsp;1400 по&nbsp;1499&nbsp;гг</h3>
+                    <div class="ac__array"></div>
+                  </button>
+                </h2>
+                <div class="ac-panel">
+                  <ul class="list-reset painter__list">
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Бенедетто
+                        ди&nbsp;Биндо</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn"
+                        data-path="defailt">Бергоньоне, Амброджо</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Биссоло,
+                        Франческо</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn"
+                        data-path="defailt">Больтраффио, Джованни</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn"
+                        data-path="defailt">Бонсиньори, Франческо</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Боттичини,
+                        Рафаэлло</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn"
+                        data-path="defailt">Брамантино</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Бреа,
+                        Людовико</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Бьяджо
+                        д&rsquo;Антонио Туччи</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn"
+                        data-path="defailt">Веккьетта</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Андреа
+                        Верроккьо</button></li>
+                    <li class="painter__item painter__item--active"><button class="btn-reset painter__item-btn"
+                        data-path="main">Доменико Гирландайо</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Беноццо
+                        Гоццоли</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Граначчи,
+                        Франческо</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Грегорио
+                        ди&nbsp;Чекко</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Джованни
+                        да&nbsp;Удине</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Джованни
+                        ди&nbsp;Паоло</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn"
+                        data-path="defailt">Джорджоне</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Парентино,
+                        Бернардо</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn"
+                        data-path="defailt">Пезеллино</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Пьетро
+                        Перуджино</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn" data-path="defailt">Перуцци,
+                        Бальдассаре</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn"
+                        data-path="defailt">Пизанелло</button></li>
+                    <li class="painter__item"><button class="btn-reset painter__item-btn"
+                        data-path="defailt">Пинтуриккьо</button></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger">
+                    <h3>C&nbsp;1500 по&nbsp;1599&nbsp;гг</h3>
+                    <div class="ac__array"></div>
+                  </button>
+                </h2>
+                <div class="ac-panel">
+                  <div class="ac__inner flex">
+                    <picture>
+                      <img class="def-img" src="img/painter__def.png" alt="">
+                    </picture>
+                    <div class="def__inner flex">
+                      <h3 class="def__inner-tittle">Здесь пока пусто</h3>
+                      <p class="def__inner-descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное
+                        для себя</p>
+                      <a href="#gallery" class="painter__to-gallary">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger">
+                    <h3>C&nbsp;1600 по&nbsp;1699&nbsp;гг</h3>
+                    <div class="ac__array"></div>
+                  </button>
+                </h2>
+                <div class="ac-panel">
+                  <div class="ac__inner flex">
+                    <picture>
+                      <img class="def-img" src="img/painter__def.png" alt="">
+                    </picture>
+                    <div class="def__inner flex">
+                      <h3 class="def__inner-tittle">Здесь пока пусто</h3>
+                      <p class="def__inner-descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное
+                        для себя</p>
+                      <a href="#gallery" class="painter__to-gallary">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger">
+                    <h3>C&nbsp;1700 по&nbsp;1799&nbsp;гг</h3>
+                    <div class="ac__array"></div>
+                  </button>
+                </h2>
+                <div class="ac-panel">
+                  <div class="ac__inner flex">
+                    <picture>
+                      <img class="def-img" src="img/painter__def.png" alt="">
+                    </picture>
+                    <div class="def__inner flex">
+                      <h3 class="def__inner-tittle">Здесь пока пусто</h3>
+                      <p class="def__inner-descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное
+                        для себя</p>
+                      <a href="#gallery" class="painter__to-gallary">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger">
+                    <h3>C&nbsp;1800 по&nbsp;1899&nbsp;гг</h3>
+                    <div class="ac__array"></div>
+                  </button>
+                </h2>
+                <div class="ac-panel">
+                  <div class="ac__inner flex">
+                    <picture>
+                      <img class="def-img" src="img/painter__def.png" alt="">
+                    </picture>
+                    <div class="def__inner flex">
+                      <h3 class="def__inner-tittle">Здесь пока пусто</h3>
+                      <p class="def__inner-descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное
+                        для себя</p>
+                      <a href="#gallery" class="painter__to-gallary">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger">
+                    <h3>C&nbsp;1900 по&nbsp;1999&nbsp;гг</h3>
+                    <div class="ac__array"></div>
+                  </button>
+                </h2>
+                <div class="ac-panel">
+                  <div class="ac__inner flex">
+                    <picture>
+                      <img class="def-img" src="img/painter__def.png" alt="">
+                    </picture>
+                    <div class="def__inner flex">
+                      <h3 class="def__inner-tittle">Здесь пока пусто</h3>
+                      <p class="def__inner-descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное
+                        для себя</p>
+                      <a href="#gallery" class="painter__to-gallary">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger">
+                    <h3>C&nbsp;2000&nbsp;г</h3>
+                    <div class="ac__array"></div>
+                  </button>
+                </h2>
+                <div class="ac-panel">
+                  <div class="ac__inner flex">
+                    <picture>
+                      <img class="def-img" src="img/painter__def.png" alt="">
+                    </picture>
+                    <div class="def__inner flex">
+                      <h3 class="def__inner-tittle">Здесь пока пусто</h3>
+                      <p class="def__inner-descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное
+                        для себя</p>
+                      <a href="#gallery" class="painter__to-gallary">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="events">
+      <div class="container">
+        <h2 class="events__tittle">События</h2>
+        <div class="events__swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="events__card">
+                <picture class="fdd">
+                  <img class="events__photo" src="img/events-1.jpg" alt="">
+                </picture>
+                <div class="events__card-inner">
+                  <span class="events__data">Музей им. Щусева<br>с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля</span>
+                  <h3 class="events__card-tittle">Книжная гравюра в&nbsp;живом восприятии</h3>
+                  <p class="events__card-descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+                    художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо</p>
+                  <a href="" class="evens__card-link">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="events__card">
+                <picture class="fdd">
+                  <img class="events__photo" src="img/events-2.jpg" alt="">
+                </picture>
+                <div class="events__card-inner">
+                  <span class="events__data">ММОМА<br>24&nbsp;марта 19:00</span>
+                  <h3 class="events__card-tittle">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.
+                  </h3>
+                  <p class="events__card-descr">Высокий уровень вовлечения представителей целевой аудитории является
+                    чётким доказательством простого факта</p>
+                  <a href="" class="evens__card-link">Подробнее</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="events__card">
+                <picture class="fdd">
+                  <img class="events__photo" src="img/events-3.jpg" alt="">
+                </picture>
+                <div class="events__card-inner">
+                  <span class="events__data">Еврейский музей<br>с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля</span>
+                  <h3 class="events__card-tittle">Выставка &laquo;Формация 2020&raquo;</h3>
+                  <p class="events__card-descr">Идейные соображения высшего порядка, а&nbsp;также современная
+                    методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений</p>
+                  <a href="" class="evens__card-link">Подробнее</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="events__card">
+                <picture class="fdd">
+                  <img class="events__photo" src="img/events-4.jpg" alt="">
+                </picture>
+                <div class="events__card-inner">
+                  <span class="events__data">ММАМ<br>с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая</span>
+                  <h3 class="events__card-tittle">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора&raquo;</h3>
+                  <p class="events__card-descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+                    художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо</p>
+                  <a href="" class="evens__card-link">Подробнее</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="events__card">
+                <picture class="fdd">
+                  <img class="events__photo" src="img/events-5.jpg" alt="">
+                </picture>
+                <div class="events__card-inner">
+                  <span class="events__data">Третьяковка на&nbsp;Крымском валу<br>с&nbsp;30&nbsp;марта
+                    по&nbsp;30&nbsp;апреля</span>
+                  <h3 class="events__card-tittle">XXIV Международная биеннале молодого искусства</h3>
+                  <p class="events__card-descr">Внезапно, реплицированные с&nbsp;зарубежных источников, современные
+                    исследования</p>
+                  <a href="" class="evens__card-link">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev-events"></div>
+          <div class="swiper-button-next-events"></div>
+        </div>
       </div>
     </section>
   </main>
+  <footer class="footer"></footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/choices.min.js"></script>
+  <script src="js/accordion.min.js"></script>
   <script src="js/index.js"></script>
 </body>
 
